@@ -129,7 +129,7 @@ export class Animated extends React.Component {
     const {children, style, isVisible, innerRef, className} = this.props;
     const {animation, delay, duration} = this.state;
 
-    const classes = classNames("animated", animation, className);
+    const classes = classNames(animation ? "animated" : "", animation, className);
 
     const backwardStyle = isLteIE9 || !animation ? {
       opacity: isVisible ? 1 : 0,
