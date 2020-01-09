@@ -128,7 +128,9 @@ export class Animated extends React.Component {
   render() {
     const {children, style, isVisible, innerRef, className} = this.props;
     const {animation, delay, duration} = this.state;
-
+    
+    console.log("animation",animation)
+    
     const classes = classNames(animation ? "animated" : "", animation, className);
 
     const backwardStyle = isLteIE9 || !animation ? {
